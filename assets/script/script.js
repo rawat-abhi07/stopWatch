@@ -12,7 +12,7 @@ function startVisibility(){
         button.style.display = "none";
     });   
 }
-
+// change the display of btns 
 function changeVisibilty(){
     const buttons = [start, resume, reset];
     buttons.forEach(button => {
@@ -38,10 +38,13 @@ reset.addEventListener("click",()=>{
     changeVisibilty();
      resume.innerHTML="Pause"
 })
+
+
 resume.addEventListener("click",()=>{
     console.log(resume.innerText);
+    // checks the value is pause or resume and after that it will work or call function accouring to that
     if(resume.innerText=="Pause"){
-        // stop timer  
+        // s
         clearInterval(timerInterval);
         resume.innerHTML="Resume";
         
@@ -66,7 +69,8 @@ function startTimer(){
     }, 10);
 }
 function updateDisplay() {
-    min.textContent = minutes.toString().padStart(2, '0') + " :";
+    min.textContent = minutes.toString().padStart(2, '0') + " :"; 
     sec.textContent = seconds.toString().padStart(2, '0') + " :";
     centisec.textContent = centiseconds.toString().padStart(2, '0');
+    // for padStart min length is 2 and pad str is 0
 }
